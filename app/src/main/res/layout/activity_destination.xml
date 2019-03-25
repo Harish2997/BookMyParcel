@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.haribooo.bookmyparcel.SendnumActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/blue"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/head"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="top|center_horizontal"
+                android:text="Destination Details"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/dstname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:hint="Receiver Name"
+                android:inputType="textCapSentences"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash" />
+
+            <EditText
+                android:id="@+id/dstcomp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/dstname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:hint="Company Name"
+                android:inputType="textCapSentences"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash" />
+
+            <EditText
+                android:id="@+id/dstmob"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/dstcomp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash"
+                />
+
+            <EditText
+                android:id="@+id/dststrt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/dstmob"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:hint="Street"
+                android:inputType="textCapSentences"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash"
+                />
+
+
+            <EditText
+                android:id="@+id/dstcity"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/dststrt"
+                android:layout_centerHorizontal="true"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:hint="City/Town"
+                android:inputType="textCapSentences"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash"
+                />
+
+            <EditText
+                android:id="@+id/dstpin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/dstcity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:hint="Pincode"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash"
+                />
+
+            <TextView
+                android:id="@+id/selection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/dstpin"
+                android:fontFamily="sans-serif-condensed"
+                android:text="(If Document select the weight, for Non-Document fill the below required fields)"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/typespin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/selection"
+                android:textAlignment="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:entries="@array/acc_type"
+                android:textColorHint="@color/black">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/docwt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/typespin"
+                android:layout_marginLeft="20dp"
+                android:textAlignment="center"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:textColorHint="@color/black">
+
+            </Spinner>
+
+
+            <EditText
+                android:id="@+id/nondocl"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/docwt"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:enabled="false"
+                android:textColorHint="@drawable/edit_text"
+                android:ems="10"
+                android:hint="Length"
+                android:inputType="number"
+                />
+
+            <EditText
+                android:id="@+id/nondocb"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/nondocl"
+                android:textAlignment="center"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:enabled="false"
+                android:textColorHint="@drawable/edit_text"
+                android:ems="10"
+                android:hint="Breadth"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/nondoch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/nondocb"
+                android:layout_marginLeft="80dp"
+                android:enabled="false"
+                android:textColorHint="@drawable/edit_text"
+                android:textAlignment="center"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:hint="Height"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/nondoch"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="(l-Length, b-Breadth, h-Height in Cm)"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/nondocwt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/info"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:enabled="false"
+                android:textColorHint="@drawable/edit_text"
+                android:ems="10"
+                android:hint="Weight"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/decval"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/nondocwt"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:enabled="false"
+                android:textColorHint="@drawable/edit_text"
+                android:ems="10"
+                android:hint="Declared Value Rs."
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/decval"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/yellowb"
+                android:text="Submit"
+                android:textColorHint="@color/black" />
+
+            <TextView
+                android:id="@+id/das1"
+                android:layout_below="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:text="Made a Mistake? Then Reset it."/>
+
+
+            <Button
+                android:id="@+id/ba"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/yellowb"
+                android:layout_below="@id/das1"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:text="Reset" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

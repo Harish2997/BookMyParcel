@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.haribooo.bookmyparcel.SendnumActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/blue"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/head"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top|center_horizontal"
+                android:text="Sender Details"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+
+            <EditText
+                android:id="@+id/sndname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white"
+                android:textAlignment="center"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:textColorHint="@color/ash"
+                android:layout_below="@+id/head"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Sender Name"
+                android:inputType="textCapSentences" />
+
+            <EditText
+                android:id="@+id/sndcomp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash"
+                android:layout_below="@+id/sndname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Company Name"
+                android:inputType="textCapSentences" />
+
+            <EditText
+                android:id="@+id/sndstrt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white"
+                android:layout_below="@+id/sndcomp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Street"
+                android:inputType="textCapSentences" />
+
+            <EditText
+                android:id="@+id/sndarea"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash"
+                android:layout_below="@+id/sndstrt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Area"
+                android:inputType="textCapSentences" />
+
+            <EditText
+                android:id="@+id/sndcity"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:background="@drawable/white"
+                android:layout_below="@+id/sndarea"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="City/Town"
+                android:inputType="textCapSentences" />
+
+            <EditText
+                android:id="@+id/sndpin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white"
+                android:layout_below="@+id/sndcity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:textAlignment="center"
+                android:textColorHint="@color/ash"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Pincode"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/yellowb"
+                android:layout_below="@id/sndpin"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:text="Next" />
+
+
+            <TextView
+                android:id="@+id/das"
+                android:layout_below="@+id/send"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:text="Made a Mistake? Then Reset it."/>
+            <Button
+                android:id="@+id/ba"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/yellowb"
+                android:layout_below="@id/das"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="Reset" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

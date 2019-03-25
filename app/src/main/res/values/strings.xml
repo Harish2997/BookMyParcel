@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">BookMyParcel</string>
+
+    <string name="termhd">Terms and Condition</string>
+    <string name="term1">1. RATES QUOTED ARE Ex. SAIBABA COLONY COIMBATORE. AT PRESENT APP BOOKING AVAILABLE ONLY FOR COIMBATORE AND OUTSKIRTS AREA.</string>
+    <string name="term2">2. PARCELS ABOVE 3 KG TO 2O Kgs FREE PICK UP FROM SAIBABA COLONY, KK PUDUR, TVS NAGAR, VADAVALLI, R S PURAM, AND  NORTH KOVAI.</string>
+    <string name="term3">3. FOR OTHER PLACES AND WEIGHT ABOVE 20 Kgs PICK UP CHARGES WILL BE EXTRA.</string>
+    <string name="term4">4. ACTUAL WEIGHT AND VOLUMETRIC WEIGHT       (LXBXH IN Cms  Divided BY 4750 = Wt Kgs,) WILL BE MEASURED  AND WHICH EVER IS HIGHER WILL BE TAKEN INTO ACCOUNT.</string>
+    <string name="term5">5. PAYMENT SHOULD BE PAID TO THE BOOKING/PICK UP PERSON. BALANCE IF ANY ON RECEIPT OF WAYBILL/CONSIGNMENT NOTE.</string>
+
+
+    <string name="abouthd1">DTDC EXPRESS LTD,</string>
+    <string name="abouthd2">Franchise : Shri Sainath Logistics</string>
+    <string name="abouthd3">S B COMPLEX,  157 – N S R  ROAD, SAIBABA COLONY,</string>
+    <string name="abouthd4">(OPP.) KANNAN DEPARTMENTAL STORE, / SOUTH INDIAN BANK</string>
+    <string name="abouthd5">COIMBATORE  - 641011</string>
+    <string name="about6">1. DTDC Is a 26 years old Courier and Logistics company in India , With 10,000 Channel Partners and having a turnover of 600 crores Per Annum.</string>
+    <string name="about7">2. DTDC has branches in ALL Major TOWNS IN INDIA to give Timely DOOR delivery /Online TRACKING / Delivery UPDATION of your Courier / Parcels and Cargo. </string>
+    <string name="about8">3. DTDC has Value Added Services delivery system to deliver your courier /Parcels in 24 HOURS in METRO and with in 48/72 HOURS in  other MAJOR CITIES in NORTH INDIA.</string>
+    <string name="about9">4. DTDC can REVERSE pick up Parcels/ Cargo from PAN INDIA to Coimbatore.</string>
+    <string name="about10">5. DTDC has special SCHEME for CORPORATE clients.</string>
+    <string name="abouthd11">INTERNATIONAL:</string>
+    <string name="about12">DTDC has OWN branches in 26 countries ABROAD and for other Overseas Destinations  has TIE UP arrangement with major service providers to offer BEST Rates  in Booking / Delivering /Picking -up and Freight Forwarding   your COURIER and PARCELS in TIME. </string>
+    <string name="abouthd13">DOTZOT :</string>
+    <string name="about14"> Is an arm of DTDC to help E-COMMERCE business to Deliver consignment on "CASH ON DELIVERY" basis.</string>
+    <string name="about15">We Solicit your  Enquiry and order  to  PROVE  our COMPETITIVE and Best services.</string>
+    <string name="about16">CONTACT :98944 39171 / 0422 4369171  </string>
+    <string name="about17">For quotes /Booking COURIER and PARCELS</string>
+    <string name="thank">Thank You for reaching us.</string>
+    <string name="reachus">We will contact you soon</string>
+
+
+    <string-array name="acc_type">
+        <item>Document</item>
+        <item>Parcel</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,236 @@
+package team.har.bookmyparcel;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class SenderActivity extends AppCompatActivity {
+    public EditText sndname,sndcomp,sndstrt,sndarea,sndcity,sndpin;
+    public Button send;
+    public String sendname,sendcompany,sendstreet,sendarea,sendcity,sendpin;
+    public TextView shownumber;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sender);
+
+        initializeEditTexts();
+        Button send = (Button) findViewById(R.id.send);
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                // Getting data from the form
+                getDataFromForm();
+
+                if (sndname.length() == 0 || sndcomp.length() == 0 || sndstrt.length() == 0|| sndarea.length() == 0|| sndcity.length() == 0|| sndpin.length() == 0) {
+                    //show toast when not correctly completed
+                    Toast.makeText(getApplicationContext(), "Complete the form correctly", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Converting phoneNumber to long type
+                    long pin = Long.parseLong(sendpin);
+                    // Converting ageBirth to double type
+
+                    // Creating Bundle object
+                    Bundle c = new Bundle();
+
+                    // Storing data into bundle
+                    c.putString("sendname", sendname);
+                    c.putString("sendcompany",sendcompany);
+                    c.putString("sendstreet",sendstreet);
+                    c.putString("sendarea",sendarea);
+                    c.putString("sendcity",sendcity);
+                    c.putLong("sendpin", pin);
+
+                    // Creating Intent object
+                    Intent in = new Intent(SenderActivity.this, DestinationActivity.class);
+
+                    // Storing bundle object into intent
+                    in.putExtras(c);
+                    startActivity(in);
+                }
+            }
+        });
+
+        initializeViews();
+
+        Intent in = getIntent();
+
+        Bundle b = in.getExtras();
+
+        long mobilenumberLong = b.getLong("mobilenumber");
+        String mobilenumberString = Long.toString(mobilenumberLong);
+
+        shownumber.setText("Phone number : " + mobilenumberString);
+    }
+
+    public void initializeViews() {
+        shownumber = (TextView) findViewById(R.id.shownumber);
+    }
+
+public void initializeEditTexts() {
+    sndname = (EditText) findViewById(R.id.sndname);
+    sndcomp = (EditText) findViewById(R.id.sndcomp);
+    sndstrt = (EditText) findViewById(R.id.sndstrt);
+    sndarea = (EditText) findViewById(R.id.sndarea);
+    sndcity = (EditText) findViewById(R.id.sndcity);
+    sndpin = (EditText) findViewById(R.id.sndpin);
+}
+    public void getDataFromForm() {
+        sendname = sndname.getText().toString();
+        sendcompany = sndcomp.getText().toString();
+        sendstreet = sndstrt.getText().toString();
+        sendarea = sndarea.getText().toString();
+        sendcity = sndcity.getText().toString();
+        sendpin = sndpin.getText().toString();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="team.har.bookmyparcel.SendnumActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:fillViewport="false"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Sender Details"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:gravity="top|center_horizontal"/>
+    <TextView
+        android:id="@+id/shownumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/sndname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Sender Name"
+        android:layout_below="@+id/shownumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/sndcomp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Comapny Name"
+        android:layout_below="@+id/sndname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/sndstrt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Street"
+        android:layout_below="@+id/sndcomp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/sndarea"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Area"
+        android:layout_below="@+id/sndstrt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/sndcity"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="City/Town"
+        android:layout_below="@+id/sndarea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/sndpin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Pincode"
+        android:layout_below="@+id/sndcity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sndpin"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Sample"/>
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>
